@@ -103,6 +103,26 @@ nav ul li a {
     }
 }
 
+/* About */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.img-box img {
+    border-radius: 50%;
+    max-width: 350px;
+    padding: 1%;
+    box-shadow: -2px -3px 3px inset #272727;
+
+}
+.word-box {
+    text-align: center;
+    max-width: 350px;
+
+}
+
 
 
 /* Projects */
@@ -116,6 +136,7 @@ nav ul li a {
     align-items: center;
     flex-flow: column nowrap;
     margin: 5% auto;
+    border-radius: 8px;
 }
 
 .card {
@@ -163,10 +184,10 @@ button {
 
 img {
     border-radius: 8px;
-    box-shadow: 1px 1px 5px #4F4E28;
+    box-shadow: 1px 1px 5px #4376c9;
 }
 
-h4 {
+h2 {
     text-align: center;
     font-family: 'Eczar', serif;
     font-size: 1.4rem;
