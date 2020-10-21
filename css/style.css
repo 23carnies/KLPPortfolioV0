@@ -112,6 +112,7 @@ nav ul li a {
 }
 .img-box img {
     border-radius: 50%;
+    border: 4px inset #FFFFFF;
     max-width: 350px;
     padding: 1%;
     box-shadow: -2px -3px 3px inset #272727;
@@ -121,6 +122,12 @@ nav ul li a {
     text-align: center;
     max-width: 350px;
 
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
 }
 
 
@@ -196,4 +203,19 @@ h2 {
 
 p {
     max-width: 400px;
+}
+
+
+/* Contact */
+@media screen and (min-width: 769px) {
+    #contact-form {
+        width: 700px;
+    }
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
