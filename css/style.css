@@ -4,11 +4,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 18px;
-    background-color: #F9FAF4;
+    
 }
+
+body {
+    background-color: #1E3C3C;
+}
+
 nav {
     width: 100%;
     padding: 0 .5rem;
+    background-color: #F4B551;
+    margin-bottom: 2%;
 }
 
 nav ul {
@@ -151,9 +158,8 @@ nav ul li a {
 .card {
     max-width: 95%;
     margin: 5% auto;
-    box-shadow: 1px 2px 8px #4376c9;
+    box-shadow: 1px 2px 8px #215250;
     border-radius: 12px;
-
     padding: 2%;
     display: flex;
     flex-direction: column;
@@ -168,8 +174,8 @@ nav ul li a {
     margin-top: 2%;
 }
 
-button {
-    padding: 3%;
+button, .submit {
+    padding: 2%;
     margin: 2%;
     font-size: 1.2rem;
     border-radius: .5rem;
@@ -178,15 +184,15 @@ button {
 }
 
 .link {
-    background-color: #925F17;
+    background-color: #ED8332;
     border: 1px solid #2c1d07;
-    box-shadow: 1px 1px 4px #4F4E28;
+    box-shadow: 1px 1px 4px #EFA13A;
 }
 
 .code {
-    background-color: #4F4E28;
+    background-color: #215250;
     border: 1px solid #282714;
-    box-shadow: 1px 1px 4px #925F17;
+    box-shadow: 1px 1px 4px #1E3C3C;
 }
 
 .link:disabled {
@@ -196,11 +202,11 @@ button {
 
 img {
     border-radius: 8px;
-    box-shadow: 1px 1px 5px #4376c9;
+    box-shadow: 1px 1px 5px #215250;
     width: 350px;
 }
 
-h2 {
+h2, label {
     text-align: center;
     font-family: 'Eczar', serif;
     font-size: 1.4rem;
@@ -229,8 +235,9 @@ p {
 
 /* Contact */
 @media screen and (min-width: 769px) {
-    #contact-form {
-        width: 700px;
+
+    .input {
+        max-width: 500px;
     }
 }
 
@@ -239,7 +246,31 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 95%;
 }
+label {
+    font-size: 1rem;
+}
+.input {
+    width: 80%;
+    padding: 1%;
+    border-radius: 8px;
+    border: 1px solid;
+    margin: 1%;
+    box-shadow: 1px 2px 8px #272727;
+}
+.submit {
+    background-color: #215250;
+    padding: 1%;
+    box-shadow: 1px 2px 8px #215250;
+}
+.submit:active {
+
+}
+.submit:hover {
+
+}
+
 
 /* Footer */
 footer {
