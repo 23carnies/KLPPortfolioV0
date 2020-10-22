@@ -21,11 +21,14 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this);
-            }).then(reset());
+                const form = document.getElementById('contact-form');
+                form.reset();
+                const messageEl = document.getElementById('message');
+                messageEl.innerText = 'Your message was successfully sent.'
+                setTimeout(() => {messageEl.className = 'hidden'}, 2000)
+            });
         }
     </script>
 </head>
@@ -112,6 +115,7 @@
       <!-- <div id="contact" class="elfsight-app-fad38366-4bbe-4297-8adc-b61622270be8"></div> -->
     <div class="form-box">
         <h2 id="contact">Let's Work Together</h2>
+        <h4 id="message" class="visible"></h4>
         <form id="contact-form">
           <input class="input" type="hidden" name="contact_number">
           <label>Name</label>
