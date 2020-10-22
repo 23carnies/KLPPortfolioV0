@@ -122,32 +122,39 @@ nav ul li a {
 }
 
 /* About */
+.about-bkgr {
+    background-image: url(/resources/images/maps.jpg);
+    background-size: cover;
+    height: 350px;
+}
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%;
-    background-image: url(/resources/images/maps.jpg);
-    background-size: cover;
-
 }
 
 .img-box img {
-    border-radius: 50%;
+    float: left;
+    border-radius: 25% 8% 25% 0;
     border: 4px inset #FFFFFF;
     max-width: 350px;
     padding: 1%;
     box-shadow: -2px -3px 3px inset #272727;
-    z-index: 5;
-    opacity: 1;
-
 }
 
 .word-box {
+    flex-flow: column wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    max-width: 350px;
-    z-index: 2;
+    max-width: 500px;
+}
 
+.main {
+    position: static;
+    font-size: 18px;
 }
 
 
@@ -228,16 +235,16 @@ button,
 }
 
 .link {
-    background-color: #ED8332;
-    border: 1px solid #272727;
-    box-shadow: 1px 1px 4px #272727;
+    background-color: #813772;
+    border: 1px solid #FFFFFF;
+    box-shadow: 1px 1px 4px #929292;
     transition: .5s ease-in-out;
 }
 
 .code {
     background-color: #B82601;
-    border: 1px solid #272727;
-    box-shadow: 1px 1px 4px #272727;
+    border: 1px solid #FFFFFF;
+    box-shadow: 1px 1px 4px #929292;
     transition: .5s ease-in-out;
 
 }
