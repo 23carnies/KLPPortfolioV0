@@ -46,6 +46,7 @@ nav ul li a {
     text-decoration: none;
     padding: .5rem 1rem;
     color: #FFFFFF;
+    font-size: 20px;
 }
 
 #name {
@@ -64,7 +65,7 @@ nav ul li a {
     margin-left: auto;
 }
 
-.flag-box {
+/* .flag-box {
     display: none;
     justify-content: center;
     align-items: center;
@@ -72,7 +73,7 @@ nav ul li a {
 
 .flag {
     padding: 0;
-}
+} */
 
 @media screen and (max-width: 599px) {
     nav {
@@ -105,24 +106,18 @@ nav ul li a {
 }
 
 @media(hover:hover) and (pointer:fine) {
-
-    #name:hover,
-    .item:hover {
-        background-color: #FBDD9D;
-        text-shadow: 1px 2px #4F4E28,
-            -1px 2px 3px #4F4E28;
-        /* padding: 1.2rem .6rem; */
+    #name:hover,.item:hover {
+        text-shadow: -12px -12px 12px #835e7c,
+                     12px 12px 12px #813772,
+                     -12px 12px 12px #835e7c,
+                     12px -12px 12px #813772;
+        transition: 1s ease-in;
     }
 }
 
 @media(hover:none) and (pointer: coarse) {
-
-    #name:active,
-    .item:active {
-        background-color: #FBDD9D;
-        text-shadow: 1px 2px #4F4E28,
-            -1px 2px 3px #4F4E28;
-        /* padding: 1.2rem .6rem; */
+    #name:active,.item:active {
+        color: #813772;
     }
 }
 
@@ -190,10 +185,6 @@ nav ul li a {
     border-radius: 12px;
     padding: 2%;
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 
 .card:hover {
@@ -203,6 +194,10 @@ nav ul li a {
 
 .card img {
     width: 200px;
+}
+#bilingue {
+    margin-top: -10px;
+    height: 200px;
 }
 
 .card-body {
@@ -261,11 +256,6 @@ button,
     background-color: rgba(146, 95, 23, );
     opacity: .3;
 } */
-
-img {
-    border-radius: 5px;
-
-}
 
 h4 {
     font-size: 24px;
