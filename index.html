@@ -6,7 +6,8 @@
     <title>K. Lobin Perkins Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <link rel="stylesheet" href="/css/style.css">
     <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -24,7 +25,7 @@
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this);
-            }).reset();
+            }).then(reset());
         }
     </script>
 </head>
@@ -44,18 +45,22 @@
         <div id="me" class="about">
             <div class="img-box"><img src="/resources/images/cartoonK.jpeg" alt="Cartoon picture of Karen"></div>
             <div class="word-box">
-                <h2 class="hi">Hi, I'm Karen.</h2>
-                <h4 class="main">I am a full stack developer with a passion for languages, sports, and helping others become their best selves. </h4>
+                <h2 class="hi animate__animated animate__flipInX">Hi, I'm Karen.</h2>
+                <h4 class="main">I am a full stack developer with an eye for design and a passion for making great products. </h4>
             </div>
         </div>
     
 
  <!-- Projects -->
+ <div class="projects">
+
+
+ <h2 class="built">I Built This</h2>
  <div id="work" class="card-container">
     <!-- Project One -->
     <div class="card">
         <img src="/resources/images/bilingue.png" alt="Screenshot of bilingüe app"/>
-        <div class="card-text">
+        <div class="card-body">
             <h4>bilingüe</h4>
             <p>A full CRUD app built with Django and Python for maintaining Spanish language skills. Designed with pure CSS.</p>
             <div class="btn-box">
@@ -67,7 +72,7 @@
      <!-- Project Two  -->
     <div class="card">
         <img src="/resources/images/MYMLogoNoBkgr.png" alt="Screenshot of Meet Your Maker app"/>
-        <div class="card-text">
+        <div class="card-body">
             <h4>Meet Your Maker</h4>
             <p>A full CRUD MERN stack app connecting urban farmers and makers with local buyers. A group project that utilizes AWS-SDK and Semantic UI for React.</p>
             <div class="btn-box">
@@ -79,7 +84,7 @@
     <!-- Project Three -->
     <div class="card">
         <img src="/resources/images/dailyWod.png" alt="Screenshot of wodWizard app"/>
-        <div class="card-text">
+        <div class="card-body">
             <h4>wodWizard</h4>
             <p>A full CRUD Express and NodeJS app for daily workouts and workout tracking utilizing Bootstrap for styling.</p>
             <div class="btn-box">
@@ -91,7 +96,7 @@
      <!-- Project Four  -->
     <div class="card">
         <img src="/resources/images/rouletteWheelColorsFull.png" alt="Screenshot of Psychedelic Roulette app"/>
-        <div class="card-text">
+        <div class="card-body">
             <h4>Psychedelic Roulette</h4>
             <p>A vibrant, digital update to the centuries old table game. Built using HTML, pure CSS, and vanilla Javascript.</p>
             <div class="btn-box">
@@ -101,10 +106,12 @@
         </div>
     </div>
 </div>
+</div>
       <!-- Contact -->
 
       <!-- <div id="contact" class="elfsight-app-fad38366-4bbe-4297-8adc-b61622270be8"></div> -->
     <div class="form-box">
+        <h2 id="contact">Let's Work Together</h2>
         <form id="contact-form">
           <input class="input" type="hidden" name="contact_number">
           <label>Name</label>
@@ -120,6 +127,7 @@
     <footer>
         <a href="https://www.linkedin.com/in/karen-lobin-perkins/"><i class="fab fa-linkedin-in fa-3x"></i></a>
         <a href="https://github.com/23carnies"><i class="fab fa-github fa-3x"></i></a>
+        <a href="/resources/karenlobinperkins.pdf">Download Resume</a>
     </footer>
 
 </body>
