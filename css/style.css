@@ -124,6 +124,10 @@ nav ul li a {
 }
 
 /* About */
+#me {
+    height: 100vh;
+}
+
 .about-bkgr {
     background-image: url(/resources/images/double.jpg);
     background-color:rgba(212, 169, 24, 0.9); 
