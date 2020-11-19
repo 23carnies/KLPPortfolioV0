@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700&family=Rubik:wght@400;600&display=swap");
+
+$primary-color: #3c3c3c;
+$secondary-color: rgb(212, 169, 24);
+$accent-color: #1d932b;
+$text-color: rgb(196, 193, 193);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: $text-color;
+}
+
+@mixin center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

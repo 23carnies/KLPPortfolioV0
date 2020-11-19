@@ -1,0 +1,135 @@
+@import 'config';
+
+main {
+    background-color: $primary-color;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    padding: 0 .5rem;
+    background-color: #000;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+
+    &__item {
+        list-style: none;
+        position: relative;
+        padding: .8rem;
+        transition: 0.5s;
+    }
+
+    &__item > a {
+        text-decoration: none;
+        padding: .5rem 1rem;
+        color: $text-color;
+        font-size: 20px;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+    }
+    
+    #name {
+        list-style-type: none;
+        font-family: 'Eczar', serif;
+        font-size: 2rem;
+        color: $text-color;
+    }
+
+    #left {
+        margin-left: auto;
+    }
+}
+
+
+
+h1, h2, h3 {
+    font-family: 'Eczar', serif;
+    text-align: center;
+    // border-bottom: 3px solid $secondary-color;
+    margin-bottom: 1%;
+}
+
+h3 {
+    color: $secondary-color;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+
+    &:hover {
+        color: $text-color;
+        text-shadow: 1px 2px $secondary-color;
+    }
+}
+
+p {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 10px 0;
+}
+
+.special {
+    font-size: 20px;
+}
+
+.section {
+    padding: 2% 5%;
+    border-bottom: 3px solid $secondary-color;
+    max-width: 1000px;
+
+    &__box {
+        // max-width: 90%;
+        padding: 2%;
+    }
+}
+
+img {
+    width: 96%;
+    margin: 2% 2% 0 2%;
+}
+
+figcaption {
+    font-size: .7rem;
+    margin: {
+        top: -1%;
+        left: 4%;
+    }
+}
+
+ul {
+    margin: {
+        top: 10px;
+        left: 10%;
+    }
+
+    li {
+        list-style-type: circle;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    p {
+        font: 18px;
+    }
+
+    .special {
+        font-size: 22px;
+    }
+}

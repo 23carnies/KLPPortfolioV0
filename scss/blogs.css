@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700&family=Rubik:wght@400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: #c4c1c1;
+}
+
+main {
+  background-color: #3c3c3c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  width: 100%;
+  padding: 0 .5rem;
+  background-color: #000;
+}
+
+.menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.menu-nav__item {
+  list-style: none;
+  position: relative;
+  padding: .8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu-nav__item > a {
+  text-decoration: none;
+  padding: .5rem 1rem;
+  color: #c4c1c1;
+  font-size: 20px;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+}
+
+.menu-nav #name {
+  list-style-type: none;
+  font-family: 'Eczar', serif;
+  font-size: 2rem;
+  color: #c4c1c1;
+}
+
+.menu-nav #left {
+  margin-left: auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Eczar', serif;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+h3 {
+  color: #d4a918;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: #1d932b;
+}
+
+a:hover {
+  color: #c4c1c1;
+  text-shadow: 1px 2px #d4a918;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 10px 0;
+}
+
+.special {
+  font-size: 20px;
+}
+
+.section {
+  padding: 2% 5%;
+  border-bottom: 3px solid #d4a918;
+  max-width: 1000px;
+}
+
+.section__box {
+  padding: 2%;
+}
+
+img {
+  width: 96%;
+  margin: 2% 2% 0 2%;
+}
+
+figcaption {
+  font-size: .7rem;
+  margin-top: -1%;
+  margin-left: 4%;
+}
+
+ul {
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+ul li {
+  list-style-type: circle;
+  padding-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  p {
+    font: 18px;
+  }
+  .special {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=blogs.css.map */
