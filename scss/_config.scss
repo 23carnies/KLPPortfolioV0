@@ -18,3 +18,7 @@ $text-color: rgb(196, 193, 193);
   justify-content: center;
   align-items: center;
 }
+
+@mixin transition-ease {
+    transition: all .4s ease-in-out;
+}

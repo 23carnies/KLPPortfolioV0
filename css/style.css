@@ -411,30 +411,7 @@ footer a {
     color: #FFFFFF;
 }
 
-.linkdin:hover {
-    color: #0E76A8;
-    transition: .4s linear;
-}
-.github:hover {
-    color: #4078c0;
-    transition: .4s linear;
-}
-.twitter:hover {
-    color: #00ACEE;
-    transition: .4s linear;
-}
-.res {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.resume {
-    font-size: 18px;
-    font-weight: bold;
-}
-.resume:hover, .res-file:hover {
-    color: #813772;
-    transition: .4s linear;
+.icon:hover {
+    color: rgb(212, 169, 24);
+    transition: .4s ease-in-out;
 }

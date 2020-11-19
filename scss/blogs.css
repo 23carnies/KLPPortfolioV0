@@ -64,10 +64,8 @@ main {
 }
 
 .menu-nav #name {
-  list-style-type: none;
   font-family: 'Eczar', serif;
   font-size: 2rem;
-  color: #c4c1c1;
 }
 
 .menu-nav #left {
@@ -147,5 +145,30 @@ ul li {
   .special {
     font-size: 22px;
   }
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer footer > a {
+  margin: 0 20px;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+footer footer > a:hover {
+  color: secodary-color;
 }
 /*# sourceMappingURL=blogs.css.map */
