@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700&family=Rubik:wght@400;600&display=swap");
 
-$primary-color: #3c3c3c;
-$secondary-color: rgb(212, 169, 24);
-$accent-color: #1d932b;
-$text-color: rgb(196, 193, 193);
+$primary-color: #062F4F;
+$secondary-color: #EFA13A;
+$accent-color: #ad6ea2;
+$text-color: #fff;
 
 * {
   box-sizing: border-box;
@@ -13,7 +13,7 @@ $text-color: rgb(196, 193, 193);
   color: $text-color;
 }
 
-@mixin center($direction) {
+@mixin centerFlex {
   display: flex;
   justify-content: center;
   align-items: center;

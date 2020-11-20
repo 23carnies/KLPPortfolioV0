@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .icon {
+
+        margin: 0 20px;
+        border-radius: 5px;
+        color: $text-color;
+
+        &:hover {
+            text-shadow: none;
+            color: $secondary-color;
+            @include transition-ease;
+        }
+    }
+}

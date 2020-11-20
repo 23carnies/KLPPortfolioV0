@@ -5,24 +5,23 @@
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
-  color: #c4c1c1;
+  color: #fff;
 }
 
-main {
-  background-color: #3c3c3c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.jumboPic {
+  width: 100%;
+  height: 300px;
+  background-color: #EFA13A;
+  background-image: url(../resources/blogImages/coffee.jpg);
+  background-size: cover;
+}
+
+.special {
+  font-size: 20px;
+}
+
+#word {
+  border: 3px inset #fff;
 }
 
 .nav {
@@ -57,7 +56,7 @@ main {
 .menu-nav__item > a {
   text-decoration: none;
   padding: .5rem 1rem;
-  color: #c4c1c1;
+  color: #fff;
   font-size: 20px;
   font-size: 1.5rem;
   border-radius: .5rem;
@@ -72,6 +71,70 @@ main {
   margin-left: auto;
 }
 
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .icon {
+  margin: 0 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+footer .icon:hover {
+  text-shadow: none;
+  color: #EFA13A;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+main {
+  width: 100%;
+  background-color: #062F4F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 300px;
+  background-color: #EFA13A;
+  background-image: url(../resources/blogImages/network.jpg);
+  background-position: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.date {
+  font-family: 'Eczar', serif;
+  font-size: 20px;
+  text-align: left;
+}
+
 h1, h2, h3 {
   font-family: 'Eczar', serif;
   text-align: center;
@@ -79,7 +142,7 @@ h1, h2, h3 {
 }
 
 h3 {
-  color: #d4a918;
+  color: #EFA13A;
 }
 
 h4 {
@@ -89,12 +152,12 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #1d932b;
+  color: #ad6ea2;
 }
 
 a:hover {
-  color: #c4c1c1;
-  text-shadow: 1px 2px #d4a918;
+  color: #fff;
+  text-shadow: 1px 2px #EFA13A;
 }
 
 p {
@@ -103,13 +166,9 @@ p {
   padding: 10px 0;
 }
 
-.special {
-  font-size: 20px;
-}
-
 .section {
   padding: 2% 5%;
-  border-bottom: 3px solid #d4a918;
+  border-bottom: 3px solid #EFA13A;
   max-width: 1000px;
 }
 
@@ -138,19 +197,9 @@ ul li {
   padding-bottom: 5px;
 }
 
-@media only screen and (min-width: 768px) {
-  p {
-    font: 18px;
-  }
-  .special {
-    font-size: 22px;
-  }
-}
-
-footer {
+.blogs {
+  max-width: 1000px;
   width: 100%;
-  height: 150px;
-  background-color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,15 +209,44 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-footer footer > a {
-  margin: 0 20px;
-  border-radius: 5px;
-  color: #FFFFFF;
+.blogs__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-footer footer > a:hover {
-  color: secodary-color;
+.blogs__box > p {
+  margin-top: -4%;
+}
+
+.blogs__img {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+  .special {
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=blogs.css.map */

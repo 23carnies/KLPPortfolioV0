@@ -1,6 +1,10 @@
 @import 'config';
+@import '1';
+@import 'nav';
+@import 'foot';
 
 main {
+    width: 100%;
     background-color: $primary-color;
     display: flex;
     flex-flow: column wrap;
@@ -8,49 +12,26 @@ main {
     align-items: center;
 }
 
-.nav {
+.jumbotron {
     width: 100%;
-    padding: 0 .5rem;
-    background-color: #000;
+    height: 300px;
+    background: {
+        color: $secondary-color;
+        image: url(../resources/blogImages/network.jpg);
+        position: center;
+    }
 }
 
-.menu-nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0;
+.center {
+    text-align: center;
+}
 
-    &__item {
-        list-style: none;
-        position: relative;
-        padding: .8rem;
-        transition: 0.5s;
-    }
-
-    &__item > a {
-        text-decoration: none;
-        padding: .5rem 1rem;
-        color: $text-color;
-        font-size: 20px;
-        font-size: 1.5rem;
-        border-radius: .5rem;
-    }
+.date {
+    font-family: 'Eczar', serif;
+    font-size: 20px;
+    text-align: left;
     
-    #name {
-        // list-style-type: none;
-        font-family: 'Eczar', serif;
-        font-size: 2rem;
-        // color: $text-color;
-    }
-
-    #left {
-        margin-left: auto;
-    }
 }
-
-
 
 h1, h2, h3 {
     font-family: 'Eczar', serif;
@@ -84,9 +65,6 @@ p {
     padding: 10px 0;
 }
 
-.special {
-    font-size: 20px;
-}
 
 .section {
     padding: 2% 5%;
@@ -103,6 +81,7 @@ img {
     width: 96%;
     margin: 2% 2% 0 2%;
 }
+
 
 figcaption {
     font-size: .7rem;
@@ -124,9 +103,35 @@ ul {
     }
 }
 
+.blogs {
+    max-width: 1000px;
+    width: 100%;
+    @include centerFlex;
+    flex-flow: row wrap;
+    
+
+
+    &__box {
+        @include centerFlex;
+        flex-direction: column;
+        
+        & > p {
+          margin-top: -4%;
+        }
+
+    }
+    
+    &__img {
+        width: 300px;
+        margin: 10px;
+        border: 1px solid $text-color;
+    }
+    
+}
+
 @media only screen and (min-width: 768px) {
     p {
-        font: 18px;
+        font-size: 18px;
     }
 
     .special {
@@ -134,23 +139,4 @@ ul {
     }
 }
 
-footer {
-    width: 100%;
-    height: 150px;
-    background-color: #000000;
-    @include center(row);
-    
-    .icon {
-        margin: 0 20px;
-        border-radius: 5px;
-        color: #FFFFFF;
 
-        &:hover {
-            color: $secodary-color;
-            @include transition-ease;
-        }
-    }
-
-
-
-}
