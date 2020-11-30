@@ -24,6 +24,7 @@ main {
 
 .center {
     text-align: center;
+    max-width: 800px;
 }
 
 .date {
@@ -66,16 +67,7 @@ p {
 }
 
 
-.section {
-    padding: 2% 5%;
-    border-bottom: 3px solid $secondary-color;
-    max-width: 1000px;
 
-    &__box {
-        // max-width: 90%;
-        padding: 2%;
-    }
-}
 
 img {
     width: 96%;
@@ -104,27 +96,44 @@ ul {
 }
 
 .blogs {
+    @include centerFlex;
+
+}
+
+.section {
+    padding: 2% 5%;
+    border-bottom: 3px solid $secondary-color;
     max-width: 1000px;
-    width: 100%;
+    // width: 100%;
     @include centerFlex;
     flex-flow: row wrap;
-    
 
-
-    &__box {
-        @include centerFlex;
-        flex-direction: column;
-        
-        & > p {
-          margin-top: -4%;
-        }
-
+    &__front {
+        margin: 5px;
     }
     
+    &__box {
+        padding: 2%;
+        @include centerFlex;
+        flex-direction: column;
+    }
+
     &__img {
         width: 300px;
         margin: 10px;
         border: 1px solid $text-color;
+    }
+
+    &__code-block {
+        background-color: $code-color;
+        padding-right: 100px;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    &__code {
+        font-family: 'Cutive Mono', monospace;
+        font-size: 14px;
     }
     
 }

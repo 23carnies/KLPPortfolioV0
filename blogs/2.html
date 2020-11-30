@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stubborn Inegenuity</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../scss/blogs.css">
+</head>
+
+<body>
+	<nav class="nav">
+        <ul class="menu-nav">
+            <li class="menu-nav__item"><a href="../index.html" id="name" >Karen Lobin Perkins</a></li>
+            <li class="menu-nav__item" id="left"><a href="../index.html#me">About</a></li>
+            <li class="menu-nav__item"><a href="../index.html#work">Projects</a></li>
+			<li class="menu-nav__item"><a href="../index.html#contact">Contact</a></li>
+			<li class="menu-nav__item active"><a href="/blogs.html">Blog</a></li>
+			
+        </ul>
+    </nav>
+	<main>
+		<div class="jumboPic">
+			<p class="date">Monday, November 30, 2020</p>
+		</div>
+		<h1>BEM and Sass Basics</h1>
+		<div class="section">
+            <p>I love CSS. I've been working with it for a long time and it works for me. It can get unweildy, however, and I was excited to learn about organizational methodologies to keep it under control.</p>
+            <p>I have seen BEM out in the wild but never knew the name or concept behind it. I started learning Sass recently and realized that BEM and Sass work hand-in-hand. So I've been trying to get a better handle on both.</p>
+		</div>
+	
+		<div class="section">
+			<div class="section__box">
+				<h3 class="special">BEM</h3>
+                <p class="special">There are several organization methodologies for CSS, OOCSS, SMACSS, SUITCSS, Atomic, and BEM. The <i>Block, Element, Modifier</i> methodology of organization allows us to see the hierarchical relationships between CSS elements.</p>
+                <p>Block level selectors stand alone on the page. They are not dependent on other blocks or elements. Name these with class selectors using a meaningful and simple name.</p>
+                 <pre class="section__code-block">
+                    <code class="section__code">
+            .menu
+            .form
+            .picture-frame
+                    </code>
+                </pre>
+                <p>Element level selectors are part of a block. They do not stand alone and are semantically linked to their block level. Name these with class selectors beginning with the block element + two underscores + the element descriptor.</p>
+                <pre class="section__code-block">
+                    <code class="section__code">
+            .menu__item
+            .form__search
+            .picture-frame__img
+                    </code>
+                </pre>
+                <p>Modifiers are extra classes that modify the block or element but keep their original class. Name these with class selectors beginning with the block or element name + two dashes + modifer descriptor</p>
+                <pre class="section__code-block">
+                    <code class="section__code">
+            .menu__item--active
+            .form--large
+            .picture-frame__img--highlighted
+                    </code>
+                </pre>
+                <p>The hierarchical structure of BEM limits cascading and specificity issues. The structure is easy for other programmers to understand. Also, using independent blocks can reduce the amount of code to maintain.</p>
+			</div>
+		
+			<div class="section__box">
+				<h3 class="special">Sass and SCSS</h3>
+                <p class="special">Sassy CSS makes me so very happy. BEM lends itself easily to the Sass conventions. For me, Sass is what CSS has been striving to be all this time.</p>
+                <p>CSS preprocessors generate CSS from their own syntax and allow extra features not natively available in CSS. Sass, which stands for Semantically awesome style sheets, and its cousin SCSS (Sassy CSS) are similar with the main difference being the use of 
+                    brackets versus indentation only in the syntax. I like the brackets and find SCSS a little easier to understand visually. Sass/SCSS can be installed by npm or yarn or you can use a VSCode extension like Live Sass Compiler.<br>
+                The Live Sass Compiler has been my go to so far. Create a scss folder and main.scss inside of it. HTML still needs a CSS file to render styles. Click Watch Sass and the compiler creates the main.css file to link to the HTML. Only write code in the scss file. Each time 
+                    the compiler runs, the .css file is overwritten.</p>
+                <p>Most CSS code works in SCSS. This is what makes SCSS easy to pick up. To change the background color of the body of the page: 
+                    <pre class="section__code-block">
+                        <code class="section__code">
+                body {
+                    background-color: #062F4F;
+                }
+                        </code>
+                    </pre>
+                Just the same as it is in CSS. The bonus points for Sass are the extras: Modularity, Nesting, Variables, Maps, Functions, and Mixins.</p> 
+                <!-- Variables -->
+                <h3>Variables</h3>
+                <p>Sass allowed for variables before CSS did so natively. The syntax is slightly different. 
+                    <pre class="section__code-block">
+                        <code class="section__code">
+                /* Set variables here */
+                $primary-color: #062F4F;
+                $accent-color: #AD6EA2;
+                $text-color: #FFFFFF;
+
+                /* Use them here */
+                body {
+	                background-color: $primary-color;
+                }
+                        </code>
+                    </pre>
+                Variables make it easy to change the value in one place, keeping the code simple and readable.</p>
+                <!-- Nesting -->
+                <h3>Nesting</h3>
+                <p>This is where BEM comes in handy. Elements can be nested inside of their block components keeping selectors grouped together. There is a lovely shorthand for nested BEM named elements. The & ampersand 
+                    indicates the same name as the parent component.
+                    <pre class="section__code-block">
+                        <code class="section__code">
+                .menu-nav {
+                    @include centerFlex;
+                    max-width: 1500px;
+                                                
+                    &__item {
+                        list-style: none;
+                        position: relative;
+                        padding: .8rem;
+                        transition: 0.5s;
+                    }
+                
+                    &__item > a {
+                        text-decoration: none;
+                        padding: .5rem 1rem;
+                        color: $text-color;
+                        font-size: 20px;
+                        font-size: 1.5rem;
+                        border-radius: .5rem;
+                    }
+                    
+                    #name {
+                        font-family: 'Eczar', serif;
+                        font-size: 2rem;
+                    }
+                        </code>
+                    </pre></p>
+                <p>Here you can see the block and element selectors were named ".menu-nav" and ".menu-nav__item". There is then an &lt a &gt tag 
+                    inside the element ".menu-nav__item" and one has an id of name. These are all nested under their parent element. Easy to find; easy to read.                 
+                </p>
+                <!-- Maps -->
+                <!-- <h3>Maps</h3> -->
+                <!-- <p>Maps are variables with key:value pairs. </p>-->
+                <!-- https://www.w3schools.com/sass/sass_functions_map.php -->
+                <h3>Extends</h3>
+                <p>Sometimes a class needs all of the styling of another class plus some. Instead of writing the same code again or mucking up the HTML with extra elements, @extend can keep your CSS and HTML clutter free.</p>
+                    <pre class="section__code-block">
+                        <code class="section__code">
+            .btn {
+                padding: 10px;
+                color: #000;
+                border-radius: 8px;
+                background-color: green;
+
+                &--danger {
+                    @extend .btn;
+                    background-color: red;
+                }
+            }
+                        </code>
+                    </pre>
+                <p>The specificity of the extended class will overwrite the differences from the class extender. Extends will only work on the class it is added to. It will not pass down to the inner selector ( &__inner ).</p>
+                <!-- Mixins -->
+                <h3>Functions and Mixins</h3>
+                <p>Functions and Mixins appear similar in design but are slightly different. Mixins output Sass code that will compile to CSS while Functions return a 
+                    value to be used for a CSS property or be passed into another function or mixin. Functions are used to compute and return values whereas Mixins are used to define styles.</p>
+
+                <h4>Mixins</h4>
+                <p>Mixins make reuseable code shortcuts that can be used throughout your project. Use flexbox to center often? You can make an easy Mixin for that!
+                    <pre class="section__code-block">
+                        <code class="section__code">
+                    /* Create Mixin here */
+                    @mixin flex-center {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    /* Call your Mixin here */
+                    .box {
+                        @include flex-center;
+                    }
+
+                    /* Mixins can also take a variable */
+                    @mixin flex-center-variable($flex-direction) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    /* Called here with the variable */
+                    .box {
+                        @include flex-center-variable(column)
+                    }
+                        </code>
+                    </pre>
+                </p>
+                <!-- Functions -->
+                <h4>Functions</h4>
+                <p>This function example is taken from the Sass-lang site.</p>
+                <pre class="section__code-block">
+                    <code class="section__code">
+                /* Create function */
+                @function invert($color, $amount: 100%) {
+                    $inverse: change-color($color, $hue: hue($color) + 180);
+                    @return mix($inverse, $color, $amount);
+                  }
+                  
+                /* Call function */
+                .header {
+                  background-color: invert($primary-color, 80%);
+                }
+                    </code>
+                </pre>
+                
+                <p>In naming Mixins and Functions in Sass, hyphens and underscores are equivalent. So flex_center and flex-center would refer to the same funciton or mixin.</p>
+                <!-- Modularity -->
+                <h3>Modularity</h3>
+                <p>For very large projects, SCSS can be divided into multiple files. Create a file for variables, one for mixins, or one for each 
+                    different page. These files are kept in the same scss directory, named beginning with an underscore, and connected to the main SCSS file using @import.<br>
+                So a file _config.scss may contain all the variables and mixins. Connect to main.scss:
+                    <pre class="section__code-block">
+                        <code class="section__code">
+            @import 'config'
+                        </code>
+                    </pre></p>
+            </div>
+            
+            <div class="section__box">
+                <h3 class="special">Credits</h3>
+                <p class="special">Big thanks to some sites that helped me gain a better understanding of BEM and Sass</p>
+                <p>This BEM for Beginners article in <a href="https://www.smashingmagazine.com/2018/06/bem-for-beginners/#block-and-elements">Smashing Magazine</a>.<br>
+                This BEM by Example article on <a href="https://seesparkbox.com/foundry/bem_by_example">seesparkbox.com</a>.<br>
+                MindBEMding an explanation on <a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">csswizardry.com</a>.</p>
+                <p>And these Sassy helpers here:<br>
+                This video tutorial CSS with Superpowers by <a href="https://www.youtube.com/watch?v=_a5j7KoflTs">codeSTACKr</a>.<br>
+                The Sass official documentation is pretty awesome <a href="https://sass-lang.com/">here</a>.<br>
+                Some further reading on maps in Sass <a href="https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184">here</a>.<br>
+                </p>
+            </div>
+		
+        </div>
+    </main>
+	<footer>
+        <a href="https://www.linkedin.com/in/karen-lobin-perkins/"><i class="fab fa-linkedin-in fa-3x icon"></i></a>
+        <a href="https://github.com/23carnies"><i class="fab fa-github fa-3x icon"></i></a>
+        <a href="https://twitter.com/home"><i class="fab fa-twitter fa-3x icon"></i></a>
+        <a href="/resources/karenlobinperkins.pdf">
+            <i class="far fa-file fa-3x icon"></i>
+        </a>
+    </footer>
+	</body>
+
+</html>

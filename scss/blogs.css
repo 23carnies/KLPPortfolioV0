@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700&family=Rubik:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Eczar:wght@400;500;700&family=Rubik:ital,wght@0,400;0,600;1,400&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -127,6 +127,7 @@ main {
 
 .center {
   text-align: center;
+  max-width: 800px;
 }
 
 .date {
@@ -166,16 +167,6 @@ p {
   padding: 10px 0;
 }
 
-.section {
-  padding: 2% 5%;
-  border-bottom: 3px solid #EFA13A;
-  max-width: 1000px;
-}
-
-.section__box {
-  padding: 2%;
-}
-
 img {
   width: 96%;
   margin: 2% 2% 0 2%;
@@ -198,8 +189,21 @@ ul li {
 }
 
 .blogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section {
+  padding: 2% 5%;
+  border-bottom: 3px solid #EFA13A;
   max-width: 1000px;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +219,12 @@ ul li {
           flex-flow: row wrap;
 }
 
-.blogs__box {
+.section__front {
+  margin: 5px;
+}
+
+.section__box {
+  padding: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,14 +240,22 @@ ul li {
           flex-direction: column;
 }
 
-.blogs__box > p {
-  margin-top: -4%;
-}
-
-.blogs__img {
+.section__img {
   width: 300px;
   margin: 10px;
   border: 1px solid #fff;
+}
+
+.section__code-block {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-right: 100px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.section__code {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 768px) {
