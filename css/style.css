@@ -223,9 +223,9 @@ nav ul li a {
     padding: 2%;
     position: relative;
 }
-#odd {
+/* #odd {
     height: 570px;
-}
+} */
 
 .card:hover {
     box-shadow: 2px 3px 8px #EFA13A;
