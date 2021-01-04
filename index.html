@@ -53,10 +53,10 @@
     <div id="me" class="about-bkgr">
         <div class="about">
             <div class="img-box">
-                <img src="/resources/images/cartoonK.jpeg" alt="Cartoon picture of Karen" />
+                <img class="animate__animated animate__flipInY" src="/resources/images/cartoonK.jpeg" alt="Cartoon picture of Karen" />
             </div>
             <div class="word-box">
-                <h2 class="hi animate__animated animate__flipInX">Hi, I'm Karen.</h2>
+                <h1 class="hi animate__animated animate__flipInX">Hi, I'm Karen.</h1>
                 <p class="main">As a design-oriented full stack engineer, I bring energy and determination to everything I do. I am an empathetic leader and a creative problem solver. A recent graduate of the Software Engineering Immersive at General Assembly, I am experienced in modern web design. Skilled in pure CSS and several frameworks, I build alluring sites and apps with great functionality.
                 <br><br>
                 I have a passion for rowing, a sport of focus and dedication. I bring these skills with me to every project. Passionate about languages, travel, and fitness, I look to make a positive difference in the world with software development.</p>
@@ -77,7 +77,7 @@
         <div id="work" class="card-container">
             <!-- Project One -->
             <div class="card">
-                <img src="/resources/images/bilingue.png" alt="Screenshot of bilingüe app" id="bilingue" />
+                <img  class="hi animate__animated animate__flipInY" src="/resources/images/bilingue.png" alt="Screenshot of bilingüe app" id="bilingue" />
                 <div class="card-body">
                     <h4 id="special">bilingüe</h4>
                     <p>
@@ -92,7 +92,7 @@
             </div>
             <!-- Project Two  -->
             <div class="card">
-                <img src="/resources/images/MYMLogoNoBkgr.png" alt="Screenshot of Meet Your Maker app" />
+                <img  class="hi animate__animated animate__flipInY" src="/resources/images/MYMLogoNoBkgr.png" alt="Screenshot of Meet Your Maker app" />
                 <div class="card-body">
                     <h4>Meet Your Maker</h4>
                     <p>
@@ -109,7 +109,7 @@
             </div>
             <!-- Project Three -->
             <div class="card">
-                <img src="/resources/images/dailyWod.png" alt="Screenshot of wodWizard app" />
+                <img  class="hi animate__animated animate__flipInY" src="/resources/images/dailyWod.png" alt="Screenshot of wodWizard app" />
                 <div class="card-body">
                     <h4>wodWizard</h4>
                     <p>
@@ -124,7 +124,7 @@
             </div>
             <!-- Project Four  -->
             <div class="card">
-                <img src="/resources/images/rouletteWheelColorsFull.png" alt="Screenshot of Psychedelic Roulette app" />
+                <img  class="hi animate__animated animate__flipInY" src="/resources/images/rouletteWheelColorsFull.png" alt="Screenshot of Psychedelic Roulette app" />
                 <div class="card-body">
                     <h4>Psychedelic Roulette</h4>
                     <p>
@@ -140,7 +140,7 @@
             </div>
             <!-- Project Five  -->
             <div class="card" id="odd">
-                <img src="/resources/images/despejadoShortScreenshot.jpg" alt="Screenshot of Despejado Weather app" />
+                <img  class="hi animate__animated animate__flipInY" src="/resources/images/despejadoShortScreenshot.jpg" alt="Screenshot of Despejado Weather app" />
                 <div class="card-body">
                     <h4>Despejado | Clear</h4>
                     <p>
@@ -162,25 +162,26 @@
     <!-- Contact -->
     <div class="form-box">
         <h2 id="contact">Let's Work Together</h2>
+        <h4 id="email">Feel free to email me at karenlobinperkins @ gmail or use the form below:</h4>
         <h4 id="message" class="visible"></h4>
         <form id="contact-form">
-            <input class="input" type="hidden" name="contact_number" />
+            <input aria-hidden="true" class="input" type="hidden" name="contact_number" />
             <label>Name</label>
-            <input class="input" type="text" name="user_name" />
+            <input aria-label="Sender name" class="input" type="text" name="user_name" />
             <label>Email</label>
-            <input class="input" type="email" name="user_email" />
+            <input  aria-label="Sender email" class="input" type="email" name="user_email" />
             <label>Message</label>
-            <textarea class="input" name="message"></textarea>
+            <textarea aria-label="Sender message" class="input" name="message"></textarea>
             <input class="submit" type="submit" value="Send" />
         </form>
     </div>
 
     <footer>
-        <a href="https://www.linkedin.com/in/karen-lobin-perkins/"><i class="fab fa-linkedin-in fa-3x icon"></i></a>
-        <a href="https://github.com/23carnies"><i class="fab fa-github fa-3x icon"></i></a>
-        <a href="https://twitter.com/home"><i class="fab fa-twitter fa-3x icon"></i></a>
-        <a href="/resources/karenlobinperkins.pdf">
-            <i class="far fa-file fa-3x icon"></i>
+        <a aria-label="LinkedIn link" href="https://www.linkedin.com/in/karen-lobin-perkins/"><i class="fab fa-linkedin-in fa-3x icon aria-hidden="true""></i></a>
+        <a aria-label="Github link" href="https://github.com/23carnies"><i class="fab fa-github fa-3x icon" aria-hidden="true"></i></a>
+        <a aria-label="Twitter link" href="https://twitter.com/home"><i class="fab fa-twitter fa-3x icon" aria-hidden="true"></i></a>
+        <a aria-label="PDF resume download" href="/resources/karenlobinperkins.pdf">
+            <i class="far fa-file fa-3x icon" aria-hidden="true"></i>
         </a>
     </footer>
 </body>
